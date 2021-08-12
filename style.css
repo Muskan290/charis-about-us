@@ -15,84 +15,49 @@
     background: #ffd480;
     /* background: linear-gradient(#ffbf80,#ffe6cc); */
 }
-.s2, .s4{
+.s2, .s4, .s6{
     background: linear-gradient(#af420c,#fcc3a6);
 }
-/* section 6 body */
-.body{
-    line-height: 1.6;
+.grid-container{
     display: grid;
-    /* grid-template-rows: 10em 50vh auto 10em; */
-    grid-template-columns: 1fr 5fr 2fr 1fr;
-    grid-template-areas: "header header header header"
-                          "hero hero hero hero"
-                          ". main sidebar ."
-                          "footer footer footer footer";
-    grid-column-gap: 1.5em;                      
+    grid-template-columns: 200px 250px;
+    grid-auto-rows: minmax(150px, auto);
+    grid-column-gap: 80px;
+    grid-template-areas:  " side-img content "
+                          " side-img content "
+                          " side-img lower-img";
+    grid-row-gap: 20px;
+    margin-left: 10%;
+    margin-top: 2%;
 }
-/* section 6 header */
-.header{
+/* .header{
     grid-area: header;
-}
-.header,
-.footer{
-    background: black;
-    color: yellow;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-/* .header-title
-.footer-title{
-     @include font-alt($color:yellow,$font-size:fs-h2);
 } */
-.hero{
-    grid-area: hero;
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/gridarea-hero-bg.jpg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.side-img{
+    grid-area: side-img;
 }
-.hero-subtitle{
-    color: #fff;
+.lower-img{
+    grid-area: lower-img;
+    padding-left: 80px;
+    padding-top: 0px;
 }
-.main{
-    grid-area: main;
-}
-.aside{
-    grid-area: sidebar;
-}
-.footer{
-    grid-area: footer;
-}
-/* About us Card */
-.card{
-    display: grid;
-    /* grid-template-columns: 1fr 3fr;
-    grid-template-rows: min-content auto; */
-    grid-template: "img title" min-content
-    "img content" auto / 1fr 3fr;
-    box-shadow: 0 0 1rem rgba(0, 0, 0,0.5);
-    padding: 1em;
-    grid-column-gap: 1.5em;
-    margin-top: 1em;
-}
-.card-img{
-    grid-area: img;
-    max-width: 100%;
-}
-.card-title{
-    margin: 0;
-    grid-area: title;
-    font-weight: 300;
-}
-.card-content{
+.content{
     grid-area: content;
+    padding-left: 80px;
+    width: 60vw;
+    line-height: 1.5em;
+    margin-bottom: 0%;
+    padding-bottom: 0;
+  
+    
 }
-/* .hero{
-    grid-area: hero;
-} */
+.content p{
+   padding-top: 20px;
+}
+
 nav{
     background-color: rgba(247, 199, 160, 0.1) ;
     width: 100%;
